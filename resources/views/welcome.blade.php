@@ -22,4 +22,3 @@
 
 @extends('layouts.inicio')
 @extends('layouts.app')
-

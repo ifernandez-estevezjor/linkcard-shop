@@ -39,25 +39,23 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-
     public function login(Request $request){
         $input = $request->all();
 
         $this->validate($request, [
-            'email' =>'required|email',
-            'password' => 'required',
+            'email' => 'required|email',
+            'password' => 'required'
         ]);
         if (auth()->attempt(array('email' => $input['email'], 'password' => $input['password']))) {
             if (auth()->user()->type == 'admin') {
                 return redirect()->route('admin.home');
-            }else if (auth()->user()->type == 'manager') {
+            }elseif (auth()->user()->type == 'manager') {
                 return redirect()->route('manager.home');
-            }else{
+            }else {
                 return redirect()->route('home');
             }
-        }else{
-            return redirect()->route('login')->with('error', 'Los datos son erróneos. Por favor, intenta de nuevo.');
+        }else {
+            return redirect()->route('login')->with('error', 'Los datos son requeridos.');
         }
     }
-
 }

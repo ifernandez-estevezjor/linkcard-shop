@@ -31,6 +31,10 @@ class HomeController extends Controller
         return view('editProfileUser');
     }
 
+    public function editLinkcard(){
+        return view('editLinkcard');
+    }   
+
     /**
      * Show tha application dashboard.
      * 
