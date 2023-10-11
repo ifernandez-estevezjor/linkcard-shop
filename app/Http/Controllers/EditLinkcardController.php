@@ -25,13 +25,32 @@ class EditLinkcardController extends Controller
         ]);
     }*/
 
+    public function create(){
+        return view('editLinkcard');
+    }
+
     public function store(Request $request){
+        $request->validate([
+            'lc_bio' => ['required', 'string', 'max:255']
+        ]);
+
+        $user=User::create([
+            'lc_bio' => $request->lc_bio
+        ]);
+
+        if (!$user) {
+            return redirect()->back()->with('error', 'Error insert');
+        }
+            return redirect()->route('editLinkcard')->with('success', 'Save successfully');
+    }
+
+    /*public function store(Request $request){
         $validatedData = $request->validate([
             'lc_bio' => ['required','string','max:255']
         ]);
         EditLinkcard::create($validatedData);
         return redirect()->route('editLinkcard')->with('success', 'Linkcard Updated Successfully');
-    }
+    }*/
 
     /*protected function create(array $data)
     {

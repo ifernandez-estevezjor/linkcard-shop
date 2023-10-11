@@ -39,7 +39,7 @@
 
 <!-- ======= Hero Section ======= -->
 <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-    <div class="hero-container" data-aos="fade-in">
+    <div class="hero-container">
         <h1>Samara Mayte</h1>
         <p>Yo soy <span class="typed" data-typed-items="Arquitecta, Diseñadora, Fotógrafa, Freelancer"></span></p>
     </div>
@@ -107,7 +107,6 @@
 
             <div class="section-title">
                 <h2>Idiomas</h2>
-                <!--<p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>-->
             </div>
 
             <div class="row no-gutters">
@@ -282,8 +281,7 @@
                         <!--<p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p>-->
                     </div>
                 </div>
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                    <!--<h3 class="resume-title">Logos</h3>-->
+                <!--<div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="container-logos">
                         <div class="box-logos">
                             <img src="./assets/img/logo_tec_mty.jpeg" class="img-logo img-tecmty"
@@ -298,7 +296,7 @@
                                 alt="Universidad Tecnológica">
                         </div>
                     </div>
-                </div>
+                </div>-->
             </div>
 
         </div>
@@ -432,12 +430,11 @@
     </section><!-- End Resume Section -->
 
     <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
+    <!--<section id="portfolio" class="portfolio">
         <div class="container">
 
             <div class="section-title">
                 <h2>Portafolio</h2>
-                <!--<p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>-->
             </div>
 
             <div class="row" data-aos="fade-up">
@@ -601,7 +598,8 @@
             </div>
 
         </div>
-    </section><!-- End Portfolio Section -->
+    </section>-->
+    <!-- End Portfolio Section -->
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact section-bg">
@@ -683,15 +681,30 @@
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
 <!-- Vendor JS Files -->
-<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-<script src="assets/vendor/aos/aos.js"></script>
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-<script src="assets/vendor/typed.js/typed.umd.js"></script>
-<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-<script src="assets/vendor/php-email-form/validate.js"></script>
+<!--<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>-->
+<script src="{{url('/assets/vendor/purecounter/purecounter_vanilla.js')}}"></script>
+<!--<script src="assets/vendor/aos/aos.js"></script>-->
+<!--<script src="{{url('/assets/vendor/aos/aos.js')}}"></script>-->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!--<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>-->
+<script src="{{url('/assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+<!--<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>-->
+<script src="{{url('/assets/vendor/glightbox/js/glightbox.min.js')}}"></script>
+<!--<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>-->
+<script src="{{url('/assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+<!--<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>-->
+<script src="{{url('/assets/vendor/swiper/swiper-bundle.min.js')}}"></script>
+<!--<script src="assets/vendor/typed.js/typed.umd.js"></script>-->
+<script src="{{url('/assets/vendor/typed.js/typed.umd.js')}}"></script>
+<!--<script src="assets/vendor/waypoints/noframework.waypoints.js"></script>-->
+<script src="{{url('/assets/vendor/waypoints/noframework.waypoints.js')}}"></script>
+<!--<script src="assets/vendor/php-email-form/validate.js"></script>-->
+<script src="{{url('/assets/vendor/php-email-form/validate.js')}}"></script>
 
 <!-- Template Main JS File -->
-<script src="assets/js/main.js"></script>
+<!--<script src="assets/js/main.js"></script>-->
+<script src="{{url('/assets/js/main.js')}}"></script>
+
+<script>
+    AOS.init();
+</script>

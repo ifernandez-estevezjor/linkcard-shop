@@ -17,6 +17,7 @@
                         <li>¡Empieza a usar tu Linkcard!</li>
                     </ol>
                 </p>
+                <a class="nav-link fw-bold" href="{{ route('linkcardTemplateOne') }}">{{ __('Regístrate aquí') }}</a>
             @endif
         </div>
     </div>
