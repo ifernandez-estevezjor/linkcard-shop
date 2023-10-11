@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EditLinkcardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PaypalController;
 use App\Http\Controllers\HomeController;
@@ -30,6 +31,7 @@ Route::middleware(['auth', 'user-access:user'])->group(function(){
     Route::get('/home', [HomeController::class, 'index'])->name('home');
     Route::get('/editProfileUser', [HomeController::class,'editProfileUser'])->name('editProfileUser');
     Route::get('/editLinkcard', [HomeController::class,'editLinkcard'])->name('editLinkcard');
+    Route::post('/save-linkcard', [EditLinkcardController::class, 'save-linkcard'])->name('save-linkcard');;
 });
 
 /* Route::get('/editProfileUser', [HomeController::class,'editProfileUser'])->name('editProfileUser');
@@ -48,6 +50,7 @@ Route::middleware(['auth', 'user-access:manager'])->group(function(){
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/linkcardTemplateOne', [App\Http\Controllers\LinkcardTemplatesController::class, 'index'])->name('linkcardTemplateOne');
 
 /*Auth::routes();
 

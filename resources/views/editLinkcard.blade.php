@@ -1,13 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1 class="text-center fw-bold">Editar Linkcard @{{name}} </h1>
+    <h1 class="text-center fw-bold">Editar Linkcard</h1>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-10">
                 <div class="card">
-                    <p class="login-box-msg">@include('message.flash-message')</p>
-                    <form method="POST" action="{{ route('users.create') }}">
+                    <form method="POST" action="{{ route('register') }}">
                     @csrf
                         <div class="card-header">{{ __('Conóceme') }}</div>
                             <div class="card-body">
