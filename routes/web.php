@@ -29,6 +29,7 @@ Auth::routes();
 //Normal Users Routes List
 Route::middleware(['auth', 'user-access:user'])->group(function(){
     Route::get('/home', [HomeController::class, 'index'])->name('home');
+    Route::get('/paymentSuccess', [HomeController::class, 'paymentSuccess'])->name('paymentSuccess');
     Route::get('/editProfileUser', [HomeController::class,'editProfileUser'])->name('editProfileUser');
     Route::get('/editLinkcard', [HomeController::class,'editLinkcard'])->name('editLinkcard');
     //Route::post('/save-linkcard', [EditLinkcardController::class, 'save-linkcard'])->name('save-linkcard');;

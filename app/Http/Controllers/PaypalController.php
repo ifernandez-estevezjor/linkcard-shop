@@ -50,7 +50,8 @@ class PaypalController extends Controller
         //dd($response);
 
         if (isset($response['status']) && $response['status'] == 'COMPLETED') {
-            return "¡Pago realizado correctamente! Inicia sesión para empezar a usar tu Linkcard.";
+            //return "¡Pago realizado correctamente! Inicia sesión para empezar a usar tu Linkcard.";
+            return redirect()->route('paymentSuccess')->with('success', '¡Pago realizado correctamente! Ya puedes usar tu Linkcard');
         }else{
             return redirect()->route('paypal_cancel');
         }

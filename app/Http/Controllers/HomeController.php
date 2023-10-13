@@ -33,7 +33,11 @@ class HomeController extends Controller
 
     public function editLinkcard(){
         return view('editLinkcard');
-    }   
+    }
+
+    public function paymentSuccess(){
+        return view('paymentSuccess');
+    }
 
     /**
      * Show tha application dashboard.
